@@ -34,18 +34,14 @@ contract SafeMath {
 contract AnishCoin is ERC20Interface, SafeMath {
     string public name;
     string public symbol;
-    uint8 public decimals; // 18 decimals is the strongly suggested default, avoid changing it
+    uint8 public decimals; 
 
     uint256 public _totalSupply;
 
     mapping(address => uint) balances;
     mapping(address => mapping(address => uint)) allowed;
 
-    /**
-     * Constrctor function
-     *
-     * Initializes contract with initial supply tokens to the creator of the contract
-     */
+  
     constructor() public {
         name = "AnishCoin";
         symbol = "ACO";
